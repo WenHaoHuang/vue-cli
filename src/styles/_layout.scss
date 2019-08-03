@@ -1,0 +1,131 @@
+/**
+ * @Author: wenhao.huang
+ * @UserId: 18073766
+ * @Create: 2019-04-25 19:13:36
+ */
+@import 'mixins';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.layout-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+// margin padding 留白设置
+$gutterType: margin padding;
+$direction: top right bottom left;
+
+@each $GT in $gutterType {
+  $type: 'm';
+
+  @if ($GT== 'padding') {
+    $type: 'p';
+  }
+
+  @each $dir in $direction {
+    $D: 't';
+
+    @if ($dir== 'right') {
+      $D: 'r';
+    } @else if ($dir== 'bottom') {
+      $D: 'b';
+    } @else if ($dir== 'left') {
+      $D: 'l';
+    }
+
+    @for $i from 0 to 11 {
+      @if ($i==0) {
+        .#{$type}#{$D} {
+          @include gutter($GT, $dir, $i);
+        }
+      } @else {
+        .#{$type}#{$D}#{$i*10} {
+          @include gutter($GT, $dir, $i);
+        }
+      }
+    }
+  }
+}
+
+// flex
+$Justify: start end center between around;
+$Align: start end center;
+
+@each $justify in $Justify {
+  $justifyItem: 'flex-start';
+
+  @if ($justify== 'end') {
+    $justifyItem: 'flex-end';
+  } @else if ($justify== 'center') {
+    $justifyItem: 'center';
+  } @else if ($justify== 'between') {
+    $justifyItem: 'space-between';
+  } @else if ($justify== 'around') {
+    $justifyItem: 'space-around';
+  }
+
+  @each $align in $Align {
+    $alignItem: 'flex-start';
+
+    @if ($align== 'end') {
+      $alignItem: 'flex-end';
+    } @else if ($align== 'center') {
+      $alignItem: 'center';
+    }
+
+    .row-#{$justify}-#{$align} {
+      display: flex;
+      flex-direction: row;
+      justify-content: #{$justifyItem};
+      align-items: #{$alignItem};
+    }
+    .column-#{$justify}-#{$align} {
+      display: flex;
+      flex-direction: column;
+      justify-content: #{$justifyItem};
+      align-items: #{$alignItem};
+    }
+  }
+}
+
+// float clearfix
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-content {
+  height: 99.5%;
+}

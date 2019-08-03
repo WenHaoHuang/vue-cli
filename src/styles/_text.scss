@@ -1,0 +1,50 @@
+/**
+ * @Author: wenhao.huang
+ * @UserId: 18073766
+ * @Create: 2019-07-10 19:44:55
+ */
+
+.text-primary {
+  color: $--color-primary;
+}
+.text-danger {
+  color: $--color-danger;
+}
+.text-warning {
+  color: $--color-warning;
+}
+.text-success {
+  color: $--color-success;
+}
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-xs {
+  font-size: 0.24rem;
+}
+
+.text-sm {
+  font-size: 0.28rem;
+}
+
+.text-md {
+  font-size: 0.32rem;
+}
+
+.text-lg {
+  font-size: 0.36rem;
+}
+.text-spill-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

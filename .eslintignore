@@ -1,0 +1,7 @@
+build/*.js
+config/*.js
+src/libs/*.js
+src/libs/svgRelation/tableRela.js
+src/common/js/table.js
+src/components/relation/jquery.panzoom.js
+static/*.js

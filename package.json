@@ -1,0 +1,82 @@
+{
+    "name": "ae",
+    "version": "1.0.0",
+    "description": "告警平台",
+    "main": "main.js",
+    "scripts":
+    {
+        "dev": "cross-env NODE_EVN=developer webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+        "build": "cross-env NODE_EVN=production node build/build.js",
+        "lint": "eslint --ext .js,.vue src",
+        "lintfix": "eslint --fix --ext .js,.vue src"
+    },
+    "keywords": [
+        "webpack",
+        "vue"
+    ],
+    "author": "wenhaohuang",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies":
+    {
+        "autoprefixer": "9.6.1",
+        "babel-core": "6.26.3",
+        "babel-eslint": "10.0.2",
+        "babel-helper-vue-jsx-merge-props": "2.0.3",
+        "babel-loader": "7.1.5",
+        "babel-plugin-istanbul": "5.1.4",
+        "babel-plugin-syntax-jsx": "6.18.0",
+        "babel-plugin-transform-runtime": "6.23.0",
+        "babel-plugin-transform-vue-jsx": "3.7.0",
+        "babel-preset-env": "1.7.0",
+        "babel-preset-stage-2": "6.24.1",
+        "babel-register": "6.26.0",
+        "cache-loader": "4.1.0",
+        "chalk": "2.4.2",
+        "clean-webpack-plugin": "3.0.0",
+        "compression-webpack-plugin": "3.0.0",
+        "copy-webpack-plugin": "5.0.4",
+        "cross-env": "5.2.0",
+        "css-loader": "3.1.0",
+        "cssnano": "4.1.10",
+        "eslint": "6.1.0",
+        "eslint-friendly-formatter": "4.0.1",
+        "eslint-loader": "2.2.1",
+        "eslint-plugin-vue": "5.2.3",
+        "file-loader": "4.1.0",
+        "friendly-errors-webpack-plugin": "1.7.0",
+        "html-webpack-plugin": "4.0.0-beta.5",
+        "mini-css-extract-plugin": "0.8.0",
+        "node-notifier": "5.4.0",
+        "node-sass": "4.12.0",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "ora": "3.4.0",
+        "portfinder": "1.0.21",
+        "postcss-import": "12.0.1",
+        "postcss-loader": "3.0.0",
+        "postcss-url": "8.0.0",
+        "sass-loader": "7.1.0",
+        "shelljs": "0.8.3",
+        "thread-loader": "2.1.2",
+        "uglifyjs-webpack-plugin": "2.2.0",
+        "url-loader": "2.1.0",
+        "vue-loader": "15.7.1",
+        "vue-style-loader": "4.1.2",
+        "vue-template-compiler": "2.6.10",
+        "webpack": "4.39.1",
+        "webpack-bundle-analyzer": "3.4.1",
+        "webpack-cli": "3.3.6",
+        "webpack-dev-server": "3.7.2",
+        "webpack-merge": "4.2.1"
+    },
+    "engines":
+    {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}
