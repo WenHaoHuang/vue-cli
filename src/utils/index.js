@@ -1,6 +1,6 @@
 /**
  * @Author: wenhao.huang
- * @UserId: 18073766
+ * @Github: https://github.com/WenHaoHuang
  * @Create: 2019-04-25 11:25:07
  * @Description: 公共方法
  */
